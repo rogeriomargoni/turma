@@ -1,41 +1,102 @@
 package com.target.treinamento.turma;
 
+import java.util.Scanner;
+
 public class Calculadora {
-    public static void main (String[] args) {
+	public static void main(String[] args) {
+		
+		Calculadora minhaCalculadora = new Calculadora();
+		
+		Double a = minhaCalculadora.leiaPrimeiraEntrada();
+		Double b = minhaCalculadora.leiaSegundaEntrada();
+		String o = minhaCalculadora.leiaTerceiraEntrada();
+		
+		Double minhaVariavel = new Calculadora().calcula(a, b, o);
+		System.out.println("O resultado da operação = " + minhaVariavel);
+	}
 
-        Double a = 5.0;
-        Double b = 10.0;
+	private Double lerEntrada() {
+		Scanner scanner = new Scanner(System.in);
+		return scanner.nextDouble();
+	}
 
-        Double minhaVariavel = new Calculadora().adiciona(a,b);
-        System.out.println("O resultado da adição = " + minhaVariavel);
+	private String lerEntradaOperacao() {
+		Scanner scanner = new Scanner(System.in);
+		return scanner.next().toUpperCase();
+	}
 
-        Double r_diminui = new Calculadora().diminui(a,b);
-        System.out.println("O resultado da subtração = " + r_diminui);
 
-        Double r_divide = new Calculadora().divide(a,b);
-        System.out.println("O resultado da divisão = " +r_divide);
+	
+	private Double leiaPrimeiraEntrada() {
+		System.out.println("Informe o primeiro número : ");
+		return lerEntrada();
+	}
 
-        Double r_multiplica = new Calculadora().multiplica(a,b);
-        System.out.println("O resultado da multiplicação = " +r_multiplica);
-    }
+	private Double leiaSegundaEntrada() {
+		System.out.println("Informe o segundo número : ");
+		return lerEntrada();
+	}
+	
+	private String leiaTerceiraEntrada() {
+		System.out.println("Informe a operação A(Adição) / S(Subtração) / D(Divisão) / M(Multiplicação): ");
+		return lerEntradaOperacao();
+	}
 
-    private Double adiciona(Double a,Double b){
-        Double resultado = (a+b);
-        return(resultado);
-    }
+	
+	private Double calcula(Double a, Double b, String o) {
+		/*
+		 * if (a > 10) { Double resultado = (a+b); return(resultado); } else if
+		 * (a.equals(10.0)){ return(10.0); } else { return 50.0; }
+		 */
 
-    private Double diminui(Double a,Double b){
-        Double resultado = (a-b);
-        return(resultado);
-    }
+		/* Teste do && = and
+		 * if (a > 10) { Double resultado = (a + b); return (resultado); } else if (a <
+		 * 10 && b < 10) { return 50.0; } else { return 99.9; }
+		 */
+		
+		/* Teste do || = or
+		 * 
+		 */
+		
+		/*
+		 * if (a > 10) { Double resultado = (a + b); return (resultado); } else if (a <
+		 * 10 || b < 10) { return 50.0; } else { return 99.9; }
+		 */
 
-    private Double divide(Double a,Double b){
-        Double resultado = (a/b);
-        return(resultado);
-    }
-
-    private Double multiplica(Double a,Double b){
-        Double resultado = (a*b);
-        return(resultado);
-    }
+		if (o.equals("A")) {
+				if (a > 10) { Double resultado = (a + b); 
+					return (resultado); 
+				} else if (a < 10 || b < 10) { 
+					return 50.0; 
+				} else { 
+					return 99.9; 
+				}
+		} else if (o.equals("S")) {
+				if (a > 10) { Double resultado = (a - b);
+				return (resultado); 
+			} else if (a < 10 || b < 10) { 
+				return 50.0; 
+			} else { 
+				return 99.9; 
+			}
+		} else if (o.equals("D")) {
+				if (a > 10) { Double resultado = (a / b);
+				return (resultado); 
+			} else if (a < 10 || b < 10) { 
+				return 50.0; 
+			} else { 
+				return 99.9; 
+			}
+		} else if (o.equals("M")) {
+				if (a > 10) { Double resultado = (a * b);
+				return (resultado); 
+			} else if (a < 10 || b < 10) { 
+				return 50.0; 
+			} else { 
+				return 99.9; 
+			}				
+		} else {
+			return 999.9;
+		}
+	}
 }
