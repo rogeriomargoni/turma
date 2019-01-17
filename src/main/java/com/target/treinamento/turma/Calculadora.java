@@ -44,25 +44,45 @@ public class Calculadora {
 
 	
 	private Double calcula(Double a, Double b, String o) {
-		/*
-		 * if (a > 10) { Double resultado = (a+b); return(resultado); } else if
-		 * (a.equals(10.0)){ return(10.0); } else { return 50.0; }
-		 */
+		if (o.equals("A")) {
 
-		/* Teste do && = and
-		 * if (a > 10) { Double resultado = (a + b); return (resultado); } else if (a <
-		 * 10 && b < 10) { return 50.0; } else { return 99.9; }
-		 */
+			return adicionar(a, b);
 		
-		/* Teste do || = or
-		 * 
-		 */
-		
-		/*
-		 * if (a > 10) { Double resultado = (a + b); return (resultado); } else if (a <
-		 * 10 || b < 10) { return 50.0; } else { return 99.9; }
-		 */
+		} else if (o.equals("S")) {
 
+			return subtrair(a, b);
+
+		} else if (o.equals("D")) {
+
+			return dividir(a, b);
+					
+		} else if (o.equals("M")) {
+			
+			return multiplicar(a, b);
+		
+		} else {
+			return -1.0;
+		}
+	}
+	
+	private Double adicionar(Double a, Double b) {
+		return a + b;
+	}
+
+	private Double subtrair(Double a, Double b) {
+		return a - b;
+	}
+
+	private Double dividir(Double a, Double b) {
+		return a / b;
+	}
+	
+	public Double multiplicar(Double a, Double b) {
+		return a * b;
+	}
+	
+	/*
+	private Double calcula(Double a, Double b, String o) {
 		if (o.equals("A")) {
 				if (a > 10) { Double resultado = (a + b); 
 					return (resultado); 
@@ -99,4 +119,6 @@ public class Calculadora {
 			return 999.9;
 		}
 	}
+	*/
+
 }
