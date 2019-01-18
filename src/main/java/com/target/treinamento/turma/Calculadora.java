@@ -73,7 +73,7 @@ public class Calculadora {
 		return a - b;
 	}
 
-	private Double dividir(Double a, Double b) {
+	public Double dividir(Double a, Double b) {
 		return a / b;
 	}
 	
@@ -81,44 +81,19 @@ public class Calculadora {
 		return a * b;
 	}
 	
-	/*
-	private Double calcula(Double a, Double b, String o) {
-		if (o.equals("A")) {
-				if (a > 10) { Double resultado = (a + b); 
-					return (resultado); 
-				} else if (a < 10 || b < 10) { 
-					return 50.0; 
-				} else { 
-					return 99.9; 
-				}
-		} else if (o.equals("S")) {
-				if (a > 10) { Double resultado = (a - b);
-				return (resultado); 
-			} else if (a < 10 || b < 10) { 
-				return 50.0; 
-			} else { 
-				return 99.9; 
-			}
-		} else if (o.equals("D")) {
-				if (a > 10) { Double resultado = (a / b);
-				return (resultado); 
-			} else if (a < 10 || b < 10) { 
-				return 50.0; 
-			} else { 
-				return 99.9; 
-			}
-		} else if (o.equals("M")) {
-				if (a > 10) { Double resultado = (a * b);
-				return (resultado); 
-			} else if (a < 10 || b < 10) { 
-				return 50.0; 
-			} else { 
-				return 99.9; 
-			}				
-		} else {
-			return 999.9;
-		}
-	}
-	*/
+	//Casting (conversão de double para int)
+	//private int meuMetodo(double numero) {
+	//	return (int) numero
+	//}
 
+	//Double é maior que inteiro, então funciona sem conversão
+	//private double meuMetodo(int numero) {
+	//	return numero
+	//}
+
+	//Convertendo uma string para inteiro - PARSING
+	//private int meuMetodo(String numero) {
+	//	return Integer.valueOf(numero);
+	//}
+	
 }
