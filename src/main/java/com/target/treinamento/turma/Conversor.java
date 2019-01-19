@@ -41,11 +41,20 @@ public class Conversor {
 				System.out.println("Valores não podem ser zero(0)");
 				return 0.0;
 			} else {			
+				
+				/*
 				if (cotacao.equals(1)){
 					return calculadora.multiplicar(Double.valueOf(dolar), Double.valueOf(real));
 				} else {
 					return calculadora.dividir(Double.valueOf(real), Double.valueOf(dolar));
-				}
+				}				
+				*/
+
+				return cotacao.equals(1) ? calculadora.multiplicar(Double.valueOf(dolar), Double.valueOf(real)) : calculadora.dividir(Double.valueOf(real), Double.valueOf(dolar));
+				
 			}
 		}
+		
+		
+		
 }
