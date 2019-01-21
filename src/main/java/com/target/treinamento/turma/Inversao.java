@@ -7,9 +7,9 @@ public class Inversao {
 	public static void main(String[] args) {
 		Inversao Inversao = new Inversao();
 		
-		String  nome		= Inversao.lerNome();
-			
-		String minhaVariavel = Inversao.inversao(nome);
+		String  nome			=	Inversao.lerNome();
+		String	minhaVariavel	=	Inversao.inversao(nome);
+
 		System.out.println("O nome invertido é : " + minhaVariavel);
 	}
 
