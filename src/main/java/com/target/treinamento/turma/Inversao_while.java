@@ -12,6 +12,7 @@ public class Inversao_while {
 
 	        String minhaVariavel = Inversao.inversao(nome, tamanho);
 	        System.out.println("O nome invertido é : " + minhaVariavel);
+	        System.out.format("\n");
 
 	        if (nome.equals(minhaVariavel)) {
 	            System.out.println("Nome é Palindromo");
@@ -43,8 +44,3 @@ public class Inversao_while {
 		return invertida;
 	}
 }	    
-
-
-	    //private String inversao(String nome) {
-	        //return new StringBuilder(nome).reverse().toString();
-	    //}

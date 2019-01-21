@@ -49,3 +49,9 @@ public class Inversao {
 	}
 	
 }
+
+
+//    \\s+ = s serve para indentificar espaço em branco e o + é qualquer espaço em branco
+//String novoValor = valor.replaceAll("\\s+", "");
+
+
