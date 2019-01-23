@@ -9,7 +9,6 @@ public class MeuSegundoArray {
 	}
 
 	private void inicializa() {
-
 		Double[] meuArray = new Double[10];
 		
 		for (int i = 0; i < 10; i++) {
@@ -26,6 +25,7 @@ public class MeuSegundoArray {
 		return scanner.nextDouble();
 	}
 
+	
 	private void efetuaOperacao(Double[] meuArray) {
 		for (int i = 0 ; i < meuArray.length; i++) {
 			meuArray[i] = meuArray[i] * meuArray[i];
