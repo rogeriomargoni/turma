@@ -10,8 +10,18 @@ public class ScopoGlobalcase {
 
 		ScopoGlobalcase sg = new ScopoGlobalcase();
 
-		int variavel = 0;
+		System.out.println("Meu programa:");
+		System.out.println("[1] - Carregar array");
+		System.out.println("[2] - Listar array");
+		System.out.println("[3] - Numeros pares");
+		System.out.println("[4] - Numeros impares");
+		System.out.println("[5] - Numero maior");
+		System.out.println("[6] - Numero menor");
+		System.out.println("[7] - Array multiplicado");
+		System.out.println("[8] - SAIR");
 
+		int variavel = 0;
+		
 		while (variavel != 8) {
 
 			Integer tamanho = ScopoGlobalcase.lerTamanho();
@@ -76,8 +86,8 @@ public class ScopoGlobalcase {
 	}
 
 	private void listarArray(Integer tamanho) {
-		for (int numero = 0; numero < tamanho; numero++) {
-				System.out.println(this.meuArray[numero]);
+		for (Integer numero: this.meuArray) {
+				System.out.println("Os valores do array são: " + numero);
 			}
 	}
 	
@@ -101,22 +111,26 @@ public class ScopoGlobalcase {
 
 	
 	private void numeroMaior(Integer tamanho) {
-		
 		int maior = 0;
 		
 		for (int numero = 0; numero < tamanho; numero++) {
-			if (maior > this.meuArray[numero]) {
-				maior = this.meuArray[numero];
-			} else {
+			if (maior <= this.meuArray[numero]) {
 				maior = this.meuArray[numero];
 			}
-		System.out.println("O maior numero é o : " + maior);
 		}
+		System.out.println("O maior numero é o : " + maior);
 	}
 
+	
 	private void numeroMenor(Integer tamanho) {
-		// TODO Auto-generated method stub
-
+		int menor = this.meuArray[0];
+		
+		for (int numero = 0; numero < tamanho; numero++) {
+			if (menor >= this.meuArray[numero]) {
+				menor = this.meuArray[numero];
+			}
+		}
+		System.out.println("O menor numero é o : " + menor);
 	}
 	
 	
