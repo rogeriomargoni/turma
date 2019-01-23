@@ -21,15 +21,15 @@ public class ScopoGlobalcase {
 		System.out.println("[8] - SAIR");
 
 		int variavel = 0;
+		Integer tamanho = 0;
 		
 		while (variavel != 8) {
 
-			Integer tamanho = ScopoGlobalcase.lerTamanho();
-			Integer multi	= ScopoGlobalcase.lerMulti();
 			Integer opcao	= ScopoGlobalcase.lerOpcao();
 
 			switch (opcao) {
 			case 1:
+				tamanho = ScopoGlobalcase.lerTamanho();
 				System.out.println("carrega valor baseado em um numero inteiro");
 				sg.carregaArray(tamanho);
 				variavel = opcao;
@@ -60,6 +60,7 @@ public class ScopoGlobalcase {
 				variavel = opcao;
 				break;
 			case 7:
+				Integer multi	= ScopoGlobalcase.lerMulti();
 				System.out.println("multiplicar o total do array por um numero double");
 				sg.multiplicador(tamanho, multi);
 				variavel = opcao;
@@ -86,8 +87,9 @@ public class ScopoGlobalcase {
 	}
 
 	private void listarArray(Integer tamanho) {
+		System.out.println("Os valores do array são: ");
 		for (Integer numero: this.meuArray) {
-				System.out.println("Os valores do array são: " + numero);
+				System.out.println(numero);
 			}
 	}
 	
@@ -135,9 +137,11 @@ public class ScopoGlobalcase {
 	
 	
 	private void multiplicador(Integer tamanho, Integer multi) {
+		int valor = 0;
+		
 		for (int numero = 0; numero < tamanho; numero++) {
-			this.meuArray[numero] = this.meuArray[numero] * multi;
-			System.out.println("Numero multiplicado = " + this.meuArray[numero]);
+			valor = this.meuArray[numero] * multi;
+			System.out.println("O numero " + this.meuArray[numero] + " multiplicado por " + multi + " ficou " + valor);
 			}
 	}
 
